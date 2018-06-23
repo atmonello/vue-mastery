@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Vue Mastery</title>
+
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+    <div class="nav-bar"></div>
+
+    <div id="app">
+
+        <div class="product">
+
+            <div class="product-image">
+                <img v-bind:src="image">
+            </div>
+
+            <div class="product-info">
+
+                <h1><strong>{{ product }}</strong></h1>
+
+                <p>Available sizes:</p>
+                <ul>
+                    <li v-for="size in sizes">{{ size }}</li>
+                </ul>
+
+                <div v-for="variant in variants" :key="variant.variantId">
+                    <p v-on:mouseover="updateProduct(variant.variantImage)">{{ variant.variantColor }}</p>
+                </div>
+
+                <p v-if="inventory > 10">In Stock</p>
+                <p v-else-if="inventory <= 10 && inventory > 0">Almost sold out!</p>
+                <p v-else>Out of Stock <br/> <a v-bind:href="link" target=_vblank"">More products like this.</a></p>
+                <p v-show="onSale"><strong>On Sale!</strong></p>
+
+                <button class="add ease" v-on:click="addToCart">
+                    Add to cart
+                </button>
+                
+                <div class="cart">
+                    <p>Cart ({{ cart }})</p>
+
+                    <button class="remove ease" v-show="cart > 0" v-on:click="removeFromCart">Remove from cart</button>
+                </div>
+
+            </div>
+            
+        </div>
+
+
+    </div>
+    
+
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

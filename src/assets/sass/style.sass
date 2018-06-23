@@ -1,0 +1,92 @@
+body
+
+    .ease
+        transition: all 0.2s
+
+    *
+        font-size: 20px
+        line-height: 30px
+        font-family: Arial, Helvetica, sans-serif
+
+    strong
+        font-size: inherit
+        font-weight: 600
+
+        em
+            font-size: inherit
+            font-weight: inherit
+
+    em
+        font-size: inherit
+        font-weight: inherit
+
+    h1
+        font-size: 36px
+
+    p
+        margin: 10px 0
+
+    button
+        border: none
+        padding: 10px
+        color: white
+        margin-top: 2rem
+
+        &:hover
+            transform: scale(1.05)
+            filter: brightness(1.1)
+
+        &:active
+            transform: scale(0.95)
+            filter: brightness(0.95)
+
+    .nav-bar
+        width: 100vw
+        height: 12vh
+        background: linear-gradient(to right, rgb(10, 125, 80), rgb(25, 200, 75))
+
+    #app
+        padding: 2rem
+
+        .product
+            display: flex
+            // flex-flow: wrap
+
+            .product-image
+                height: 50vh
+
+                img
+                    max-height: 100%
+                    max-width: 100%
+
+            .product-info
+                width: 50vw
+                max-width: 500px
+                padding-left: 20px
+
+                ul
+                    list-style-type: initial
+                    margin: 2rem 0
+                    margin-left: 2rem
+                    
+                button.add
+                    background-color: mediumslateblue
+                    display: inline-block
+
+
+                .cart
+                    display: inline-block
+                    padding: 0 1rem
+                    border: 1px solid lightgray
+                    min-width: 100px
+                    text-align: center
+
+                    p
+                        display: inline-block
+
+                    button.remove
+                        margin: 0
+                        margin-bottom: 5px
+                        font-size: 16px
+                        background-color: red
+                        padding: 5px 10px
