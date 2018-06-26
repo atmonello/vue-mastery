@@ -45,7 +45,8 @@ body #app {
   body #app .product {
     display: flex; }
     body #app .product .product-image {
-      height: 50vh; }
+      height: 50vh;
+      border: 1px solid lightgray; }
       body #app .product .product-image img {
         max-height: 100%;
         max-width: 100%; }
@@ -57,9 +58,15 @@ body #app {
         list-style-type: initial;
         margin: 2rem 0;
         margin-left: 2rem; }
+      body #app .product .product-info .color-box {
+        width: 40px;
+        height: 40px;
+        margin-top: 5px; }
       body #app .product .product-info button.add {
         background-color: mediumslateblue;
         display: inline-block; }
+        body #app .product .product-info button.add:hover {
+          box-shadow: 0 8px 6px -6px mediumslateblue; }
       body #app .product .product-info .cart {
         display: inline-block;
         padding: 0 1rem;
