@@ -48,6 +48,15 @@ body .nav-bar {
 
 body #app {
   padding: 2rem; }
+  body #app .cart {
+    display: inline-block;
+    padding: 0 1rem;
+    border: 1px solid lightgray;
+    min-width: 100px;
+    text-align: center;
+    float: right; }
+    body #app .cart p {
+      display: inline-block; }
   body #app .product {
     display: flex; }
     body #app .product .product-image {
@@ -73,17 +82,11 @@ body #app {
         display: inline-block; }
         body #app .product .product-info button.add:hover {
           box-shadow: 0 8px 6px -6px mediumslateblue; }
-      body #app .product .product-info .cart {
-        display: inline-block;
-        padding: 0 1rem;
-        border: 1px solid lightgray;
-        min-width: 100px;
-        text-align: center; }
-        body #app .product .product-info .cart p {
-          display: inline-block; }
-        body #app .product .product-info .cart button.remove {
-          margin: 0;
-          margin-bottom: 5px;
-          font-size: 16px;
-          background-color: red;
-          padding: 5px 10px; }
+      body #app .product .product-info button.remove {
+        margin: 0;
+        margin-bottom: 5px;
+        font-size: 16px;
+        background-color: red;
+        padding: 5px 10px; }
+        body #app .product .product-info button.remove:hover {
+          box-shadow: 0 8px 6px -6px red; }

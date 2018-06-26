@@ -55,6 +55,18 @@ body
     #app
         padding: 2rem
 
+        .cart
+            display: inline-block
+            padding: 0 1rem
+            border: 1px solid lightgray
+            min-width: 100px
+            text-align: center
+            float: right
+
+            p
+                display: inline-block
+
+
         .product
             display: flex
             // flex-flow: wrap
@@ -89,19 +101,12 @@ body
                     &:hover
                         box-shadow: 0 8px 6px -6px mediumslateblue
 
-                .cart
-                    display: inline-block
-                    padding: 0 1rem
-                    border: 1px solid lightgray
-                    min-width: 100px
-                    text-align: center
+                button.remove
+                    margin: 0
+                    margin-bottom: 5px
+                    font-size: 16px
+                    background-color: red
+                    padding: 5px 10px
 
-                    p
-                        display: inline-block
-
-                    button.remove
-                        margin: 0
-                        margin-bottom: 5px
-                        font-size: 16px
-                        background-color: red
-                        padding: 5px 10px
+                    &:hover
+                        box-shadow: 0 8px 6px -6px red
