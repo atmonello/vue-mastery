@@ -26,6 +26,9 @@ body
     p
         margin: 10px 0
 
+    .outOfStock
+        text-decoration: line-through
+
     button
         border: none
         padding: 10px
@@ -39,6 +42,10 @@ body
         &:active
             transform: scale(0.95)
             filter: brightness(0.95)
+
+        &.disabled
+            opacity: 0.25
+            pointer-events: none !important
 
     .nav-bar
         width: 100vw
